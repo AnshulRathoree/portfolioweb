@@ -1,0 +1,49 @@
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--accent-color);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+  }
+  
+  .timeline-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .timeline-item span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 20px;
+    }
+  
+    .timeline-item span {
+      left: 20px;
+      transform: none;
+    }
+  }

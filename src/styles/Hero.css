@@ -1,0 +1,62 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .text-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 1.5s ease-out forwards;
+  }
+  
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(90deg, #6C63FF, #FF4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    perspective: 1000px;
+    margin-top: 20px;
+  }
+  
+  .profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .profile-card:hover img {
+    transform: rotateY(20deg) scale(1.3);
+  }
